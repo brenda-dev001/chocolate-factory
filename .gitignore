@@ -1,0 +1,64 @@
+# Gradle cache and build files
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Kotlin compiled files
+*.class
+*.jar
+*.war
+*.ear
+*.kotlin_module
+
+# Kotlin cache
+.kotlin/
+
+# IDE configuration files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Local environment configuration
+local.properties
+
+# Android build artifacts
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Generated Android files
+captures/
+.externalNativeBuild/
+.cxx/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+.Trash-*
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Private keys and certificates
+*.keystore
+*.jks
+*.key
