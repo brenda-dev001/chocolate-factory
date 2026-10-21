@@ -46,7 +46,7 @@ fun MenuScreen(){
             Text(modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
                 .padding(bottom = 20.dp
                 ),
-                text = "Client menu",
+                text = "Customer menu",
                 fontWeight = FontWeight.Bold,
                 fontSize = 18.sp,
                 color = Purple40
@@ -58,7 +58,7 @@ fun MenuScreen(){
                     onClick = {
 
                     }) {
-                    Text(text = "Create client", color = Purple80, fontSize = 17.sp)
+                    Text(text = "Create customer", color = Purple80, fontSize = 17.sp)
                 }
             }
 
@@ -80,7 +80,7 @@ fun MenuScreen(){
                     onClick = {
 
                     }) {
-                    Text(text = "Update client", color = Purple80, fontSize = 17.sp)
+                    Text(text = "Update customer", color = Purple80, fontSize = 17.sp)
                 }
             }
 
@@ -91,7 +91,7 @@ fun MenuScreen(){
                     onClick = {
 
                     }) {
-                    Text(text = "Remove client", color = Purple80, fontSize = 17.sp)
+                    Text(text = "Remove customer", color = Purple80, fontSize = 17.sp)
                 }
             }
             Text(modifier = Modifier.align(alignment = Alignment.CenterHorizontally)
