@@ -22,7 +22,12 @@ import com.example.factory_chocolate.ui.theme.Purple40
 import com.example.factory_chocolate.ui.theme.Purple80
 
 @Composable
-fun MenuScreen(){
+fun MenuScreen(
+    onCreateCustomerClick: () -> Unit,
+    onListCustomerClick: () -> Unit,
+    onUpdateCustomerClick: () -> Unit,
+    onDeleteCustomerClick: () -> Unit
+){
 
     val scrollState = rememberScrollState()
 
@@ -55,9 +60,7 @@ fun MenuScreen(){
                 .padding(bottom = 15.dp)
             ) {
                 Button(modifier = Modifier.fillMaxWidth(0.7f).height(40.dp),
-                    onClick = {
-
-                    }) {
+                    onClick = onCreateCustomerClick) {
                     Text(text = "Create customer", color = Purple80, fontSize = 17.sp)
                 }
             }
@@ -66,9 +69,7 @@ fun MenuScreen(){
                 .padding(bottom = 15.dp)
             ) {
                 Button(modifier = Modifier.fillMaxWidth(0.7f).height(40.dp),
-                    onClick = {
-
-                    }) {
+                    onClick = {onListCustomerClick()}) {
                     Text(text = "List customers", color = Purple80, fontSize = 17.sp)
                 }
             }
@@ -77,9 +78,7 @@ fun MenuScreen(){
                 .padding(bottom = 15.dp)
             ) {
                 Button(modifier = Modifier.fillMaxWidth(0.7f).height(40.dp),
-                    onClick = {
-
-                    }) {
+                    onClick = {onUpdateCustomerClick()}) {
                     Text(text = "Update customer", color = Purple80, fontSize = 17.sp)
                 }
             }
@@ -88,9 +87,7 @@ fun MenuScreen(){
                 .padding(bottom = 20.dp)
             ) {
                 Button(modifier = Modifier.fillMaxWidth(0.7f).height(40.dp),
-                    onClick = {
-
-                    }) {
+                    onClick = {onDeleteCustomerClick()}) {
                     Text(text = "Remove customer", color = Purple80, fontSize = 17.sp)
                 }
             }
@@ -151,5 +148,6 @@ fun MenuScreen(){
 @Preview
 @Composable
 private fun MenuScreenPreview(){
-    MenuScreen()
+    MenuScreen(onCreateCustomerClick = {}, onListCustomerClick = {},
+        onUpdateCustomerClick = {}, onDeleteCustomerClick = {})
 }
