@@ -39,7 +39,9 @@ import com.example.factory_chocolate.ui.theme.Purple80
 import com.example.factory_chocolate.ui.theme.Purple90
 
 @Composable
-fun CreateCustomerScreen(){
+fun CreateCustomerScreen(
+    onBackClick: () -> Unit
+){
 
     var cpf by remember { mutableStateOf("") }
     var name by remember { mutableStateOf("") }
@@ -59,7 +61,7 @@ fun CreateCustomerScreen(){
             contentAlignment = Alignment.Center
         ) {
             Button(
-                onClick = {},
+                onClick = {onBackClick()},
                 modifier = Modifier.align(Alignment.CenterStart).size(48.dp),
                 shape = CircleShape,
                 contentPadding = PaddingValues(0.dp)
@@ -183,5 +185,5 @@ fun CreateCustomerScreen(){
 @Composable
 @Preview
 private fun PreviewCreateCustomer(){
-    CreateCustomerScreen()
+    CreateCustomerScreen(onBackClick = {})
 }
