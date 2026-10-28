@@ -35,7 +35,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.factory_chocolate.data.model.Chocolate
-import com.example.factory_chocolate.data.model.Customer
 import com.example.factory_chocolate.ui.theme.Purple40
 import com.example.factory_chocolate.ui.theme.Purple80
 import com.example.factory_chocolate.ui.theme.Purple90
