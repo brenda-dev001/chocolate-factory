@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -24,7 +23,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.RadioButton
-import androidx.compose.material3.RadioButtonColors
 import androidx.compose.material3.RadioButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -42,7 +40,6 @@ import androidx.compose.ui.unit.sp
 import com.example.factory_chocolate.ui.theme.Purple40
 import com.example.factory_chocolate.ui.theme.Purple80
 import com.example.factory_chocolate.ui.theme.Purple90
-import org.w3c.dom.Text
 
 @Composable
 fun CreateChocolateScreen(
@@ -53,7 +50,6 @@ fun CreateChocolateScreen(
     var cocoa by remember { mutableStateOf("") }
     var value by remember { mutableStateOf("") }
     var customerCpf by remember { mutableStateOf("") }
-    var age by remember { mutableStateOf("") }
     val radioOptions = listOf("White", "Milk", "Mixed")
     var selectedOption by remember { mutableStateOf("Black") }
     val scrollState = rememberScrollState()
@@ -95,7 +91,7 @@ fun CreateChocolateScreen(
             verticalArrangement = Arrangement.Center
         ) {
             Text(modifier = Modifier.align(alignment = Alignment.CenterHorizontally),
-                text = "Enter the chocolate's information.",
+                text = "Enter the chocolate's information",
                 fontSize = 17.sp,
                 color = Purple40
             )
@@ -172,7 +168,7 @@ fun CreateChocolateScreen(
             )
             {
                 Text(modifier = Modifier.align(alignment = Alignment.Start),
-                    text = "Enter the chocolate's information.",
+                    text = "Select flavor for chocolate",
                     fontSize = 16.sp,
                     color = Purple40
                 )
