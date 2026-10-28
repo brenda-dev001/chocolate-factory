@@ -8,4 +8,5 @@ object Routes {
     const val DELETE_CUSTOMER = "delete_customer"
 
     const val CREATE_CHOCOLATE = "create_chocolate"
+    const val LIST_CHOCOLATES = "list_chocolates"
 }
