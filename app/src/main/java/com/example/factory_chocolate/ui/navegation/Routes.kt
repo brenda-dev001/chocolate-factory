@@ -6,4 +6,6 @@ object Routes {
     const val LIST_CUSTOMERS = "list_customers"
     const val UPDATE_CUSTOMER = "update_customer"
     const val DELETE_CUSTOMER = "delete_customer"
+
+    const val CREATE_CHOCOLATE = "create_chocolate"
 }
