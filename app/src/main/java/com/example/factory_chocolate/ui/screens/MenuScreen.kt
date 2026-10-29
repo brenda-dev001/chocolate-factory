@@ -28,7 +28,8 @@ fun MenuScreen(
     onUpdateCustomerClick: () -> Unit,
     onDeleteCustomerClick: () -> Unit,
     onCreateChocolateClick: () -> Unit,
-    onListChocolatesClick: () -> Unit
+    onListChocolatesClick: () -> Unit,
+    onUpdateChocolateClick: () -> Unit
 ){
 
     val scrollState = rememberScrollState()
@@ -124,9 +125,7 @@ fun MenuScreen(
                 .padding(bottom = 20.dp)
             ) {
                 Button(modifier = Modifier.fillMaxWidth(0.7f).height(40.dp),
-                    onClick = {
-
-                    }) {
+                    onClick = {onUpdateChocolateClick()}) {
                     Text(text = "Update chocolate", color = Purple80, fontSize = 17.sp)
                 }
             }
@@ -150,5 +149,5 @@ fun MenuScreen(
 private fun MenuScreenPreview(){
     MenuScreen(onCreateCustomerClick = {}, onListCustomerClick = {},
         onUpdateCustomerClick = {}, onDeleteCustomerClick = {}, onCreateChocolateClick = {},
-        onListChocolatesClick = {})
+        onListChocolatesClick = {}, onUpdateChocolateClick = {})
 }
