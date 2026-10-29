@@ -40,6 +40,9 @@ fun AppNavegation(){
                 },
                 onListChocolatesClick = {
                     navController.navigate(Routes.LIST_CHOCOLATES)
+                },
+                onUpdateChocolateClick = {
+                    navController.navigate(Routes.UPDATE_CHOCOLATE)
                 }
             )
         }
@@ -84,6 +87,14 @@ fun AppNavegation(){
 
         composable(Routes.LIST_CHOCOLATES){
             ListChocolatesScreen(
+                onBackClick = {
+                    navController.popBackStack()
+                }
+            )
+        }
+
+        composable(Routes.UPDATE_CHOCOLATE){
+            UpdateCustomerScreen(
                 onBackClick = {
                     navController.popBackStack()
                 }
