@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.factory_chocolate.ui.screens.MenuScreen
 import com.example.factory_chocolate.ui.screens.chocolate.CreateChocolateScreen
+import com.example.factory_chocolate.ui.screens.chocolate.DeleteChocolateScreen
 import com.example.factory_chocolate.ui.screens.chocolate.ListChocolatesScreen
 import com.example.factory_chocolate.ui.screens.customer.CreateCustomerScreen
 import com.example.factory_chocolate.ui.screens.customer.DeleteCustomerScreen
@@ -43,6 +44,9 @@ fun AppNavegation(){
                 },
                 onUpdateChocolateClick = {
                     navController.navigate(Routes.UPDATE_CHOCOLATE)
+                },
+                onDeleteChocolateClick = {
+                    navController.navigate(Routes.DELETE_CHOCOLATE)
                 }
             )
         }
@@ -95,6 +99,14 @@ fun AppNavegation(){
 
         composable(Routes.UPDATE_CHOCOLATE){
             UpdateCustomerScreen(
+                onBackClick = {
+                    navController.popBackStack()
+                }
+            )
+        }
+
+        composable(Routes.DELETE_CHOCOLATE){
+            DeleteChocolateScreen(
                 onBackClick = {
                     navController.popBackStack()
                 }
