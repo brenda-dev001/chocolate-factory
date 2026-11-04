@@ -10,4 +10,5 @@ object Routes {
     const val CREATE_CHOCOLATE = "create_chocolate"
     const val LIST_CHOCOLATES = "list_chocolates"
     const val UPDATE_CHOCOLATE = "update_chocolate"
+    const val DELETE_CHOCOLATE = "delete_chocolate"
 }
