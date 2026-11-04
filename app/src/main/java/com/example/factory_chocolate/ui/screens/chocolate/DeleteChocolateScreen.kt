@@ -39,7 +39,9 @@ import com.example.factory_chocolate.ui.theme.Purple80
 import com.example.factory_chocolate.ui.theme.Purple90
 
 @Composable
-fun DeleteChocolateScreen(){
+fun DeleteChocolateScreen(
+    onBackClick: () -> Unit
+){
 
     var id by remember { mutableStateOf("") }
     val scrollState = rememberScrollState()
@@ -55,7 +57,7 @@ fun DeleteChocolateScreen(){
             contentAlignment = Alignment.Center
         ) {
             Button(
-                onClick = {},
+                onClick = {onBackClick()},
                 modifier = Modifier.align(Alignment.CenterStart).size(48.dp),
                 shape = CircleShape,
                 contentPadding = PaddingValues(0.dp)
@@ -109,8 +111,8 @@ fun DeleteChocolateScreen(){
             )
 
 
-            Button(modifier = Modifier.align(alignment = Alignment.End)
-                ,onClick = {}) {
+            Button(modifier = Modifier.align(alignment = Alignment.End),
+                onClick = {}) {
                 Text(text = "Search")
             }
         }
@@ -120,5 +122,5 @@ fun DeleteChocolateScreen(){
 @Preview
 @Composable
 private fun PreviewDeleteChocolateScreen(){
-    DeleteChocolateScreen()
+    DeleteChocolateScreen(onBackClick = {})
 }
