@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.factory_chocolate.data.database.DataBaseHelper
 import com.example.factory_chocolate.ui.screens.MenuScreen
 import com.example.factory_chocolate.ui.screens.chocolate.CreateChocolateScreen
 import com.example.factory_chocolate.ui.screens.chocolate.DeleteChocolateScreen
@@ -14,7 +15,9 @@ import com.example.factory_chocolate.ui.screens.customer.ListCustomersScreen
 import com.example.factory_chocolate.ui.screens.customer.UpdateCustomerScreen
 
 @Composable
-fun AppNavegation(){
+fun AppNavegation(
+    db: DataBaseHelper
+){
 
     val navController = rememberNavController()
 
@@ -55,7 +58,8 @@ fun AppNavegation(){
             CreateCustomerScreen(
                 onBackClick = {
                     navController.popBackStack()
-                }
+                },
+                db = db
             )
         }
 
